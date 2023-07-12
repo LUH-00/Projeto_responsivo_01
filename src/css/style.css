@@ -329,9 +329,12 @@ div ul li{
         font-size: 15px;
     }
     article h1{
-        font-size: 22px;
+        font-size: 25px;
         margin-bottom: 20px;
      
+    }
+    article p{
+        font-size: 16px;
     }
 
     nav{
