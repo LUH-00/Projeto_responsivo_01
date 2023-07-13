@@ -245,12 +245,11 @@ div ul li{
 }
 
 /* RESPONIVO CELULAR */
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 768px) {
     body{
-    grid-template-columns: 100%;
-    grid-template-areas: 'header'
-                         'main'
-                         'footer';
+        width: 100%;
+        flex-direction: column;
+  
     }
 
     header{
@@ -279,7 +278,7 @@ div ul li{
         width: 200px;
     }
     main{
-        height: 195vh;
+        height: 295vh;
     }
 
     footer{
@@ -304,37 +303,37 @@ div ul li{
     }
      footer span  {font-size: 30px;}
      .cards{ 
-        width: 450px;
-        height: 225px;
+        width: 390px;
+        height: 190px;
      }
 
     article {
         margin: 10px;
     }
     
-    .cards span{ font-size: 24px;}
-    .cards p{font-size: 14px;}
+    .cards span{ font-size: 20px;}
+    .cards p{font-size: 12px;}
       
       
     main article h1{
         padding-left: 25px;
         padding-right: 25px;
-        font-size: 23px;
+        font-size: 20px;
         margin-bottom: 20px;   
     }
     main article p{
         padding-left: 25px;
         padding-right: 25px;
         margin-bottom: 50px;
-        font-size: 15px;
+        font-size: 13px;
     }
     article h1{
-        font-size: 25px;
-        margin-bottom: 20px;
+        font-size: 22px;
+        margin-bottom: 17px;
      
     }
     article p{
-        font-size: 16px;
+        font-size: 14px;
     }
 
     nav{
