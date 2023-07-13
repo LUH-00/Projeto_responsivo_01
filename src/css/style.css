@@ -1,17 +1,16 @@
-
 /* RESET */
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    border: none; /*nenhuma borda nos botões*/
-    list-style: none; /*nenhum estilo na lista*/
+    border: none;
+    list-style: none; 
     
 }
 
 /* VARIAVÉIS */
 :root {
-    --cor-principal:#ff6b81;
+    --cor-principal:#00C2B5;
     --cor-secundaria:#fff;
     --cor-escura:#000;
     --cor-cinza:#888;
@@ -25,7 +24,7 @@ body{
                          'main'
                          'footer';
     color: var(--cor-secundaria);
-    height: 100vh;
+    height: 100%;
 }
 
 /* HEADER */
@@ -33,7 +32,7 @@ body{
 header{
     grid-area: header;
     margin: 5px 80px;
-    line-height: 1cm;
+    background-color: var(--cor-principal);
 }
 nav figure{
     display: flex;
@@ -69,7 +68,7 @@ button:hover{
 button:active{
     transform: scale(0.96);
 }
-section{
+header section{
     display: flex;
     align-content: space-between;
 }
@@ -80,9 +79,10 @@ header article{
     align-self: center;
     padding: 0 30px;
 }
+
 article h1{
     font-size: 30px;
-    margin-bottom: 2px;
+    margin-bottom: 20px;
 }
 article p{
     font-size: 15px;
@@ -113,47 +113,51 @@ div button{
 }
 .phone{
     display: flex;
-    height: 520px;
+    height: 500px;
 }
-
 
 /* MAIN */
 main{
     grid-area: main;
-    height: 70vh;
+    height: 80%;
     background-color: var(--cor-secundaria);
     color: var(--cor-escura);
 }
-main article h2 {color:#ff6b81; font-size: 15px; margin-top: 30px;}
 
-main article h1{
-    margin-top: 30px;
-    display: inline-block;
-    /* padding-left: 25px;
-    padding-right: 25px; */
-    text-align: center; 
-   
-}
-main article p{
-    text-align: center;
-    display: inline-block;
-    /* padding-left: 25px;
-    padding-right: 25px; */
-    text-align: center;
-    color: var(--cor-cinza);
-
-    
-}
 main article{
     display: flex;
+    justify-content: center;
     flex-direction: column;
     align-items: center;
 }
+main article h2{
+    color: var(--cor-principal);
+    font-size: 15px;
+    text-align: center;
+    margin-top: 30px;
+}
+main article h1{
+    margin: 30px;
+    display: inline-block;
+    text-align: center;
+    padding-top: 10px;
+}
+main article p{
+    margin-top: 20px;
+    text-align: center;
+    padding-bottom: 25px;
+    display: inline-block;
+    text-align: center;
+    color: var(--cor-cinza);
+}
+
 .lista{
+    margin-left: 20%;
+    margin-right: 20%;
+    padding-bottom: 50px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center ;
-    row-gap: 20px;
+    justify-content: center;
 }
 
 .cards{
@@ -163,7 +167,7 @@ main article{
     padding: 20px;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 10px;
     border-radius: 5px;
     transition: 0.2s ease-in-out;
 }
@@ -191,16 +195,20 @@ span{
 footer{
     grid-area: footer;
     background-color: var(--cor-principal);
-    height: 40vh;
+    height: 50vh;
     color: var(--cor-secundaria);
     padding: 50px;
 }
 footer h3{
+    font-size: 25px;
     display: flex;
     justify-content: center;
 }
+footer span{
+    font-size: 20px;
+}
 small{
-    font-size: 10px;
+    font-size: 15px;
     font-weight: bolder;
 }
 div ul {
@@ -224,7 +232,7 @@ div ul li{
                              'main'
                              'footer';
     }
-    section{
+    header section{
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -240,12 +248,24 @@ div ul li{
         text-align: center;
     }
     main{
-        height: 200vh;
+        height: 100%;
+    }
+    .lista{
+      
+        margin-left: 10%;
+        margin-right: 10%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .cards{
+        width: 250px;
     }
 }
 
-/* RESPONIVO CELULAR */
-@media screen and (max-width: 767px) {
+/* modo smartphone */
+
+@media screen and (max-width: 750px) {
     body{
     grid-template-columns: 100%;
     grid-template-areas: 'header'
@@ -279,7 +299,10 @@ div ul li{
         width: 200px;
     }
     main{
-        height: 195vh;
+        height: 201%;
+    }
+    main article h1{
+        margin-bottom: 5px;
     }
 
     footer{
@@ -290,19 +313,19 @@ div ul li{
         display: flex;
         flex-direction: column;
         text-align: center;
-        font-size: 25px;
+        font-size: 20px;
     }
     small{
         font-size: 10px;
         font-weight: bolder;
-        font-size: 20px;
+        font-size: 15px;
     }
     div ul {
         display: flex;
         flex-direction: column;
         
     }
-     footer span  {font-size: 30px;}
+     footer span  {font-size: 25px;}
      .cards{ 
         width: 450px;
         height: 225px;
@@ -312,8 +335,8 @@ div ul li{
         margin: 10px;
     }
     
-    .cards span{ font-size: 24px;}
-    .cards p{font-size: 14px;}
+    .cards span{ font-size: 20px;}
+    .cards p{font-size: 13px;}
       
       
     main article h1{
@@ -342,7 +365,5 @@ div ul li{
         margin-bottom: 27px;
     }
    
-      
-    
 
 }
