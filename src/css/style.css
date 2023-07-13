@@ -267,10 +267,9 @@ div ul li{
 
 @media screen and (max-width: 750px) {
     body{
-    grid-template-columns: 100%;
-    grid-template-areas: 'header'
-                         'main'
-                         'footer';
+        width: 100%;
+        flex-direction: column;
+  
     }
 
     header{
@@ -327,8 +326,8 @@ div ul li{
     }
      footer span  {font-size: 25px;}
      .cards{ 
-        width: 450px;
-        height: 225px;
+        width: 390px;
+        height: 190px;
      }
 
     article {
@@ -342,22 +341,22 @@ div ul li{
     main article h1{
         padding-left: 25px;
         padding-right: 25px;
-        font-size: 23px;
+        font-size: 20px;
         margin-bottom: 20px;   
     }
     main article p{
         padding-left: 25px;
         padding-right: 25px;
         margin-bottom: 50px;
-        font-size: 15px;
+        font-size: 13px;
     }
     article h1{
-        font-size: 25px;
-        margin-bottom: 20px;
+        font-size: 22px;
+        margin-bottom: 17px;
      
     }
     article p{
-        font-size: 16px;
+        font-size: 14px;
     }
 
     nav{
