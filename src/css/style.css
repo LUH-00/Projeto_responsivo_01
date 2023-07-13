@@ -245,7 +245,7 @@ div ul li{
 }
 
 /* RESPONIVO CELULAR */
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 750px) {
     body{
     grid-template-columns: 100%;
     grid-template-areas: 'header'
